@@ -19,17 +19,17 @@ app.get("/",async(req,resp)=>{
     resp.send(result)
 
 })
-app.post("/",async(req,resp)=>{
-    const data=await new studentmodel(req.body)
-    const result=await data.save()
+// app.post("/",async(req,resp)=>{
+//     const data=await new studentmodel(req.body)
+//     const result=await data.save()
     
-})
-app.put("/",async(req,resp)=>{
-    const data=await studentmodel.updateOne({rollno:req.body.rollno},{$set:req.body})
-    resp.send(data)
-})
-app.delete("/",async(req,resp)=>{
-    const data=await studentmodel.deleteOne({rollno:req.body.rollno})
-    resp.send(data)
-})
+// })
+// app.put("/",async(req,resp)=>{
+//     const data=await studentmodel.updateOne({rollno:req.body.rollno},{$set:req.body})
+//     resp.send(data)
+// })
+// app.delete("/",async(req,resp)=>{
+//     const data=await studentmodel.deleteOne({rollno:req.body.rollno})
+//     resp.send(data)
+// })
 app.listen(5000)
